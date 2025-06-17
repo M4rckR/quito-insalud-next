@@ -4,7 +4,7 @@ export const HeroSection = () => {
   return (
     <div className="bg-in-cyan pb-12 md:pb-16 lg:pb-20">
         <section className="container mx-auto max-w-7xl px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center relative">
                 <div className="space-y-2">
                     <h1 className="text-in-blue text-3xl md:text-4xl lg:text-5xl font-semibold text-center md:text-left">
                         <span className="text-in-cyan-base font-bold">Recupera</span> tu vida sexual con el poder de las {' '}
@@ -17,10 +17,16 @@ export const HeroSection = () => {
                     alt="Hero Image"
                     width={500}
                     height={500}
-                    className="w-full h-full object-cover max-w-[480px] md:max-w-full mx-auto md:mx-0"
+                    className="w-full h-full object-cover max-w-[480px] md:max-w-[520px] mx-auto md:mx-0"
                     priority
                     unoptimized
                 />
+
+                <div className="flex flex-col gap-4 absolute right-0 top-0">
+                    <div className="w-8 h-8 bg-in-orange rounded-full"></div>
+                    <div className="w-8 h-8 bg-in-orange/50 rounded-full"></div>
+                    <div className="w-8 h-8 bg-in-orange/50 rounded-full"></div>
+                </div>
             </div>
         </section>
     </div>

@@ -8,10 +8,19 @@
   --color-in-cyan: #EDFBFB;
   --color-in-blue: #004569;
   --color-in-cyan-base:#00BEB4;
+  --color-in-orange: #FFB531;
+
+
+  /* Fuentes */
+  --font-in-nunito: "Nunito", sans-serif;
+  --font-in-poppins: "Poppins", sans-serif;
+  --font-in-roboto: "Roboto", sans-serif;
 }
+
 body {
-  font-family: var(--font-nunito);
+  font-family: var(--font-in-poppins);
 }
+
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);

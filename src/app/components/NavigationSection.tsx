@@ -14,7 +14,7 @@ export const NavigationSection = () => {
             className="w-36"
           />
           <nav>
-            <ul className="flex items-center gap-6 text-in-blue font-medium text-lg">
+            <ul className="flex font-in-nunito items-center gap-6 text-in-blue font-medium text-lg">
               <li className="hidden sm:block">
                 <Link href="/">Beneficios</Link>
               </li>

@@ -24,7 +24,11 @@ export async function POST(req: NextRequest) {
             from: process.env.SMTP_USER,
             to: process.env.SMTP_USER,
             subject: "New lead",
-            html: `<p>Nombres: ${nombres}</p><p>Telefono: ${telefono}</p><p>Turno: ${turno}</p>`,
+            html: `<p>Nombres: ${nombres}</p><p>Telefono: ${telefono}</p><p>Turno: ${turno}</p>
+            <p>Fecha: ${new Date().toLocaleDateString()}</p>
+            <p>Hora: ${new Date().toLocaleTimeString()}</p>
+            <p>Página actual: ${req.url}</p>
+            `,
         })
 
         return NextResponse.json({ mensaje: "Correo enviado correctamente" }, { status: 200 })

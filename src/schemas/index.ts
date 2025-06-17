@@ -1,8 +1,11 @@
 import { z } from "zod";
 
 export const formLeadsSchema = z.object({
-    name: z.string().min(1, { message: "El nombre es requerido" }),
-    phone: z.number().min(1, { message: "El teléfono es requerido" }),
-    turn: z.enum(["mañana", "tarde"]),
+    nombres: z.string().min(1, { message: "El nombre es requerido" }),
+    telefono: z.string().min(1, { message: "El teléfono es requerido" }).regex(/^\d+$/, { message: "El teléfono debe ser un número" }),
+    turno: z.union([
+        z.enum(["mañana", "tarde"]),
+        z.literal("")
+    ]),
 })
 
